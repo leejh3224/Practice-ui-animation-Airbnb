@@ -8,7 +8,11 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
-import { NavigationInjectedProps, withNavigation } from "react-navigation";
+import {
+  NavigationEvents,
+  NavigationInjectedProps,
+  withNavigation
+} from "react-navigation";
 
 import data from "./lib/getDummyData";
 

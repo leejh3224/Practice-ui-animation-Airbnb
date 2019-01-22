@@ -1,11 +1,11 @@
 import Main from 'Main'
-import { YellowBox } from 'react-native'
+import { YellowBox, Animated, Easing } from 'react-native'
 import {
 	createAppContainer,
 	createStackNavigator,
 } from 'react-navigation'
 
-import ImageModal from "ImageModal";
+import ImageModal from 'ImageModal'
 
 /**
  * Turn off some warnings
@@ -17,11 +17,31 @@ YellowBox.ignoreWarnings([
 ])
 
 export default createAppContainer(
-	createStackNavigator({
-    Main,
-    ImageModal,
-  },
-  {
-    mode: 'modal',
-  }),
+	createStackNavigator(
+		{
+			Main,
+			ImageModal,
+		},
+		{
+			mode: 'modal',
+			transitionConfig: () => ({
+				transitionSpec: {
+					duration: 300,
+					easing: Easing.out(Easing.poly(4)),
+					timing: Animated.timing,
+					useNativeDriver: true,
+				},
+				screenInterpolator: ({ position, scene }) => {
+					const { index } = scene
+
+					const opacity = position.interpolate({
+						inputRange: [index - 1, index],
+						outputRange: [0, 1],
+					})
+
+					return { opacity }
+				},
+			}),
+		},
+	),
 )

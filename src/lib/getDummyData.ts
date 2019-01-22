@@ -18,6 +18,6 @@ export default [
   },
   {
     uri: "https://q-xx.bstatic.com/images/hotel/max1024x768/699/69903300.jpg",
-    description: "cozy and warn bedrrom"
+    description: "cozy and warm bedrrom"
   }
 ];
