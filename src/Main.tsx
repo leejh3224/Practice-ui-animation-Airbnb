@@ -11,24 +11,7 @@ import {
 import Animated from "react-native-reanimated";
 import { NavigationScreenProps } from "react-navigation";
 
-const images = [
-  {
-    uri: "https://s-ec.bstatic.com/images/hotel/max1024x768/561/56121629.jpg"
-  },
-  {
-    uri: "https://q-xx.bstatic.com/images/hotel/max1024x768/107/107439149.jpg"
-  },
-  {
-    uri:
-      "https://ac-q.static.booking.cn/images/hotel/max1024x768/691/6910894.jpg"
-  },
-  {
-    uri: "https://q-xx.bstatic.com/images/hotel/max1024x768/890/89074608.jpg"
-  },
-  {
-    uri: "https://q-xx.bstatic.com/images/hotel/max1024x768/699/69903300.jpg"
-  }
-];
+import Carousel from "./Carousel";
 
 /** ui constants */
 const NAV_BAR_HEIGHT = 60;
@@ -183,7 +166,7 @@ class App extends React.Component<NavigationScreenProps> {
 
     return (
       <Animated.ScrollView
-        scrollEventThrottle={16}
+        scrollEventThrottle={1}
         onScroll={Animated.event(
           [
             {
@@ -200,7 +183,7 @@ class App extends React.Component<NavigationScreenProps> {
         )}
       >
         <View>
-          <ImageBackground source={images[0]} style={styles.carouselImage} />
+          <Carousel />
           <View style={{ padding: 16 }}>
             <Text style={{ fontSize: 18 }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
