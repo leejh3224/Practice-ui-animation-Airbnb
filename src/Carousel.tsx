@@ -35,7 +35,7 @@ class Carousel extends React.Component<Partial<NavigationInjectedProps>> {
       this.setState(
         prev => ({
           ...prev,
-          index: Math.floor(scrollValue / SCREEN_WIDTH)
+          index: scrollValue / SCREEN_WIDTH
         }),
         () => this.scrollView.scrollTo({ x: scrollValue })
       );
@@ -48,11 +48,23 @@ class Carousel extends React.Component<Partial<NavigationInjectedProps>> {
 
   render() {
     const { index } = this.state;
+
     const styles = StyleSheet.create({
       container: {
         width: SCREEN_WIDTH,
         height: CAROUSEL_HEIGHT,
         position: "relative"
+      },
+      button: {
+        backgroundColor: "#ffffff80",
+        paddingVertical: 8,
+        paddingHorizontal: 16,
+        borderRadius: 5,
+        position: "absolute",
+        bottom: 16,
+        right: 16,
+        flexDirection: "row",
+        alignItems: "center"
       }
     });
 
@@ -66,6 +78,13 @@ class Carousel extends React.Component<Partial<NavigationInjectedProps>> {
           showsHorizontalScrollIndicator={false}
           /** stops slideshow animation when touched */
           onTouchStart={() => this.clearTimer()}
+          onScroll={event => {
+            const { x: offsetX } = event.nativeEvent.contentOffset;
+            this.setState(prev => ({
+              ...prev,
+              index: Math.floor(offsetX / SCREEN_WIDTH)
+            }));
+          }}
         >
           {data.map(({ uri }) => {
             return (
@@ -79,17 +98,7 @@ class Carousel extends React.Component<Partial<NavigationInjectedProps>> {
               index
             })
           }
-          style={{
-            backgroundColor: "#ffffff80",
-            paddingVertical: 8,
-            paddingHorizontal: 16,
-            borderRadius: 5,
-            position: "absolute",
-            bottom: 16,
-            right: 16,
-            flexDirection: "row",
-            alignItems: "center"
-          }}
+          style={styles.button}
         >
           <Text style={{ color: "#262626" }}>Look Around</Text>
         </TouchableOpacity>
