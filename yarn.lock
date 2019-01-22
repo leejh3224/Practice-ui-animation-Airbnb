@@ -635,6 +635,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@expo/status-bar-height@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@expo/status-bar-height/-/status-bar-height-0.0.1.tgz#c39df6daa018fe10bba4b699cce8a881bfc6f9e4"
+  integrity sha512-kNaX1sZ1eF0M0GvEXaAtv/6BsiPHPIAxCjkUzcUQ58E1h1rsbqO/spPxedsJkw/GneXuNLXNy8+UTkWKARFLyw==
+
 "@expo/vector-icons@github:expo/vector-icons#expo-font-fix":
   version "8.0.0"
   resolved "https://codeload.github.com/expo/vector-icons/tar.gz/259d1ab7bd298832213733b5260d55b95b611df7"
@@ -5669,7 +5674,7 @@ react-native-debugger-open@^0.3.17:
     minimist "^1.2.0"
     semver "^5.4.1"
 
-react-native-gesture-handler@1.0.12, react-native-gesture-handler@^1.0.0:
+react-native-gesture-handler@1.0.12, react-native-gesture-handler@^1.0.0, react-native-gesture-handler@^1.0.12:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.0.12.tgz#99a22f90212df299245357dbd3a9a01c788f310b"
   integrity sha512-Qp5FjRmqUFeCevSu2IYQG1Xw+YXZ9YOzqze/ZxaIvWzYAoKsRchlgHhNoxvCqElp/befrnVFIjAEQyUxcmBKJw==
@@ -5682,7 +5687,7 @@ react-native-maps@*, react-native-maps@expo/react-native-maps#v0.22.1-exp.0:
   version "0.22.1"
   resolved "https://codeload.github.com/expo/react-native-maps/tar.gz/e6f98ff7272e5d0a7fe974a41f28593af2d77bb2"
 
-react-native-reanimated@1.0.0-alpha.11:
+react-native-reanimated@1.0.0-alpha.11, react-native-reanimated@^1.0.0-alpha.11:
   version "1.0.0-alpha.11"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.0.0-alpha.11.tgz#b78c839bae878d149561b56a3c750414957ea86d"
   integrity sha512-lDakjY8CXmZiSN71hyc276b3d7M9mKV9ZyYw4W/rTnnJbgBFaqdIxSHq4S4LxSbVqpAoQMfUJqPTE0BKbAz7Aw==
