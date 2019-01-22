@@ -5,6 +5,8 @@ import {
 	createStackNavigator,
 } from 'react-navigation'
 
+import ImageModal from "ImageModal";
+
 /**
  * Turn off some warnings
  */
@@ -16,6 +18,10 @@ YellowBox.ignoreWarnings([
 
 export default createAppContainer(
 	createStackNavigator({
-		Main,
-	}),
+    Main,
+    ImageModal,
+  },
+  {
+    mode: 'modal',
+  }),
 )

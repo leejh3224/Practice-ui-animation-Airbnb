@@ -1,13 +1,7 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Constants } from "expo";
 import * as React from "react";
-import {
-  ImageBackground,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View
-} from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import Animated from "react-native-reanimated";
 import { NavigationScreenProps } from "react-navigation";
 
@@ -154,16 +148,6 @@ class App extends React.Component<NavigationScreenProps> {
   }
 
   render() {
-    const styles = StyleSheet.create({
-      carouselImage: {
-        width: "100%",
-        height: CAROUSEL_HEIGHT,
-        flexDirection: "row",
-        alignItems: "flex-end",
-        justifyContent: "center"
-      }
-    });
-
     return (
       <Animated.ScrollView
         scrollEventThrottle={1}
