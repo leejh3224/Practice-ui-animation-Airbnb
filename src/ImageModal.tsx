@@ -106,7 +106,11 @@ class ImageModal extends React.Component<
            * You can use `ViewPagerAndroid` instead with `initialPage` property
            */
           Platform.OS === "android" ? (
-            <ViewPagerAndroid style={{ flex: 1 }} initialPage={index}>
+            <ViewPagerAndroid
+              ref={ref => (this.scrollView = ref)}
+              style={{ flex: 1 }}
+              initialPage={index}
+            >
               {contents}
             </ViewPagerAndroid>
           ) : (
