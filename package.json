@@ -16,7 +16,7 @@
     "react-native": "0.60.0",
     "react-native-gesture-handler": "^1.0.12",
     "react-native-reanimated": "^1.0.0-alpha.11",
-    "react-navigation": "^3.0.9",
+    "react-navigation": "^3.6.1",
     "snyk": "^1.189.0"
   },
   "devDependencies": {
